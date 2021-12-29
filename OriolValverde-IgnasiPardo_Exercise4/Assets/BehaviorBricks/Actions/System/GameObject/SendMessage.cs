@@ -35,7 +35,7 @@ namespace BBUnity.Actions
 
             for(int i = 0; i < l.Count(); i++)
             {
-                l.ElementAt(i).SendMessage(methodName);
+                 l.ElementAt(i).GetComponent<Moves>().RecieveMessage();
             }
         }
 
