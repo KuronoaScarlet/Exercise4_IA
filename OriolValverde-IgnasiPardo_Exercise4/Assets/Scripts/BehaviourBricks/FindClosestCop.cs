@@ -20,7 +20,6 @@ public class BBFindClosestCop : BasePrimitiveAction
             if(l[i].GetComponent<Moves>().found == false)
             {
                 go = l[i];
-                Debug.Log(go.name);
                 break;
             }
         }
@@ -32,7 +31,6 @@ public class BBFindClosestCop : BasePrimitiveAction
         else
         {
             var t = GameObject.FindGameObjectsWithTag("Cop").Where(x => x.GetComponent<Moves>().found == true);
-            Debug.Log(t.First().name);
             t.First().GetComponent<Moves>().BBSeek(go);
         }
 
